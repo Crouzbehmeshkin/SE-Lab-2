@@ -13,30 +13,30 @@ public class RectangleTest {
         {
             Rectangle rectangle = new Rectangle(-5, 10);
             fail("Expected NegativeSideException did not occur.");
-            throw new NegativeSideException();
         }
         catch (NegativeSideException e)
         {
+            System.out.println("Successfully passed first negativeSideTest");
         }
 
         try
         {
             Rectangle rectangle = new Rectangle(5, -10.4);
             fail("Expected NegativeSideException did not occur.");
-            throw new NegativeSideException();
         }
         catch (NegativeSideException e)
         {
+            System.out.println("Successfully passed second negativeSideTest");
         }
 
         try
         {
             Rectangle rectangle = new Rectangle(-15.59, -13.001);
             fail("Expected NegativeSideException did not occur.");
-            throw new NegativeSideException();
         }
         catch (NegativeSideException e)
         {
+            System.out.println("Successfully passed third negativeSideTest");
         }
     }
 

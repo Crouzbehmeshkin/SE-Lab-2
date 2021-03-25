@@ -1,21 +1,16 @@
 package com.selab.tdd;
 
 public class Rectangle {
-    private double w, h;
-    public Rectangle(double i, double i1) throws NegativeSideException {
-        if (i < 0)
-        {
+    private double width, height;
+    public Rectangle(double width, double height) throws NegativeSideException {
+        if (width < 0 || height < 0)
             throw new NegativeSideException();
-        }
-        else if (i1 < 0)
-        {
-            throw new NegativeSideException();
-        }
-        w = i;
-        h = i1;
+
+        this.width = width;
+        this.height = height;
     }
 
     public double computeArea() {
-        return w*h;
+        return this.width * this.height;
     }
 }
