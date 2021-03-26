@@ -1,26 +1,19 @@
 package com.selab.tdd;
 
-public class Square {
-    private double side;
+public class Square extends UnresizableRectangle {
     public Square(double side) throws NegativeSideException {
-        if (side < 0)
-            throw new NegativeSideException();
-
-        this.side = side;
-    }
-
-    public double computeArea() {
-        return this.side * this.side;
+        super(side, side);
     }
 
     public void setSide(double side) throws NegativeSideException {
         if (side < 0) {
             throw new NegativeSideException();
         }
-        this.side = side;
+        super.height = side;
+        super.width = side;
     }
 
     public double getSide() {
-        return this.side;
+        return super.getHeight();
     }
 }

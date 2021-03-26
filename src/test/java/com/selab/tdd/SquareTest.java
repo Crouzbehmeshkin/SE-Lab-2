@@ -36,7 +36,7 @@ public class SquareTest {
     }
 
     @Test
-    public void computeAreaTest()
+    public void computeAreaTest() throws NegativeSideException
     {
         double delta = 1e-4;
         Square square1 = new Square(5.32);
@@ -50,7 +50,7 @@ public class SquareTest {
     }
 
     @Test
-    public void setterAndGetterTest()
+    public void setterAndGetterTest() throws NegativeSideException
     {
         double delta = 1e-4;
 
@@ -61,14 +61,11 @@ public class SquareTest {
         square.setSide(123.456);
         assertEquals(square.getSide(), 123.456, delta);
 
-        try
-        {
+        try {
             square.setSide(-11);
             fail("Expected NegativeSideException did not occur.");
-            throw new NegativeSideException();
         }
-        catch (NegativeSideException e)
-        {}
+        catch (NegativeSideException e) {}
         assertEquals(square.getSide(), 123.456, delta);
     }
 }
