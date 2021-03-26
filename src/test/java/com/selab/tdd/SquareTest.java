@@ -69,5 +69,6 @@ public class SquareTest {
         }
         catch (NegativeSideException e)
         {}
+        assertEquals(square.getSide(), 123.456, delta);
     }
 }

@@ -69,12 +69,14 @@ public class RectangleTest {
             fail("Expected NegativeSideException did not occur.");
         }
         catch (NegativeSideException e) {}
+        assertEquals(new_w, rectangle.getWidth(), delta);
         
         try {
             rectangle.setHeight(-1);
             fail("Expected NegativeSideException did not occur.");
         }
         catch (NegativeSideException e) {}
+        assertEquals(new_h, rectangle.getHeight(), delta);
     }
 
 }
