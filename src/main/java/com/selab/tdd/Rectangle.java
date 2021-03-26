@@ -15,11 +15,17 @@ public class Rectangle {
     }
     
     public void setHeight(double height) throws NegativeSideException {
-        
+        if (height < 0) {
+            throw new NegativeSideException();
+        }
+        this.height = height;
     }
 
     public void setWidth(double width) throws NegativeSideException {
-        
+        if (width < 0) {
+            throw new NegativeSideException();
+        }
+        this.width = width;
     }
 
     public double getHeight() {
