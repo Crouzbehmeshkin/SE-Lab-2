@@ -55,14 +55,14 @@ public class RectangleTest {
 
     @Test
     public void setterAndGetterTest() throws NegativeSideException {
-        double w = 3, h = 4, new_w = 5, new_h = 6;
+        double w = 3, h = 4, new_w = 5, new_h = 6, delta = 1e-4;
         Rectangle rectangle = new Rectangle(w, h);
         
         rectangle.setWidth(new_w);
-        assertEquals(new_w, rectangle.getWidth());
+        assertEquals(new_w, rectangle.getWidth(), delta);
         
         rectangle.setHeight(new_h);
-        assertEquals(new_h, rectangle.getHeight());
+        assertEquals(new_h, rectangle.getHeight(), delta);
 
         try {
             rectangle.setWidth(-1);

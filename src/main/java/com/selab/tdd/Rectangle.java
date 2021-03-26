@@ -13,4 +13,20 @@ public class Rectangle {
     public double computeArea() {
         return this.width * this.height;
     }
+    
+    public void setHeight(double height) throws NegativeSideException {
+        
+    }
+
+    public void setWidth(double width) throws NegativeSideException {
+        
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
 }
